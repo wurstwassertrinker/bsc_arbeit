@@ -1,0 +1,64 @@
+% main.tex
+%
+% Hauptdatei der Bsc Arbeit
+%
+% Dominic Dauer, November 2017
+
+\documentclass[a4paper, halfparskip]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% \usepackage[draft]{graphicx} % Abb. draft entfernen = Bilder sichtbar 
+% \usepackage{capt-of} % Abbildungs- und Tabellenbeschriftungen in minipage
+% \usepackage{pdfpages} % Dient dem Einfügen von PDFs
+% \usepackage{amsmath} % Formeln
+% \usepackage{xcolor} % Farbige Tables
+% \usepackage{booktabs} % Eine Erweiterung der Typografie (Fette hlines,...)
+% \usepackage{geometry}
+
+% Jurabib für Quellenangaben, \bibliographystyle{jurabib} nicht vergessen!
+\usepackage[
+			ibidem=strict,
+			commabeforerest,
+			see,
+            titleformat={all,colonsep,italic},
+            authorformat={all,abbrv},
+            pages=format
+]{jurabib} 
+
+\renewcommand\samepageibidemname{Ebd.}
+\AddTo\bibsgerman{
+	\renewcommand*{\ibidemname}{Ebd.}
+	\renewcommand*{\ibidemmidname}{Ebd.}
+} % Ebd. statt ibid.
+
+\parindent 0pt  % Absätze nicht einrücken ...
+\parskip\medskipamount  % ... sondern durch einen kleinen Umbruch ersetzen
+
+\begin{document}
+\maketitle
+\tableofcontents
+\thispagestyle{empty}
+
+\abstract{Test}
+
+% Abbildungsverzeichni
+\addcontentsline{toc}{section}{Abbildungungen}
+\listoffigures
+
+% Tabellenverzeichnis
+\addcontentsline{toc}{section}{Tabellen}
+\listoftables
+
+\section{Einleitung und Themenstellung}
+\section{Material und Methodik}
+\section{Ergebnisse}
+\section{Zusammenfassung}
+\section{Anhang}
+
+% Bibliographie
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\bibliographystyle{unsrt}
+\bibliography{biblio} % Dateiname der Bibliografie
+
+\end{document}
