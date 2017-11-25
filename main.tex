@@ -32,17 +32,29 @@
 	\renewcommand*{\ibidemmidname}{Ebd.}
 } % Ebd. statt ibid.
 
+% hochgestelltes Textregistered
+\def\SymbReg{\textsuperscript{\textregistered}}
+
 \parindent 0pt  % Absätze nicht einrücken ...
 \parskip\medskipamount  % ... sondern durch einen kleinen Umbruch ersetzen
 
 \begin{document}
-\maketitle
+
 \tableofcontents
 \thispagestyle{empty}
+\pagebreak
 
-\abstract{Test}
+\abstract{
+Das Bohrwiderstandsverfahren wurde entwickelt um den Holzzustand entlang eines
+Bohrkanals zu messen. Das Verfahren kann sowohl an stehendem, grünen Holz als
+auch an verbauten, trockenem Holz angewendetet werden. 
+In dieser Arbeit wird das Bohrwiderstandsverfahren mit einem
+Resistographen\SymbReg angewandt um Jahrringanalysen an stehendem Holz
+durchzuführen. Dahingehend wird es auf seine Praktikabilität überprüft um 
+ein neues Einsatzgebiet der Bohrwiderstandsmessung zu eröffnen.
+}
 
-% Abbildungsverzeichni
+% Abbildungsverzeichnis
 \addcontentsline{toc}{section}{Abbildungungen}
 \listoffigures
 
@@ -50,15 +62,120 @@
 \addcontentsline{toc}{section}{Tabellen}
 \listoftables
 
-\section{Einleitung und Themenstellung}
-\section{Material und Methodik}
+\section{Einleitung und Themenstellung}\label{sec:einleitung}
+Das Bohrwiderstandsverfahren wurde entwickelt um den Holzzustand entlang eines
+Bohrkanals über die Dichte zu ermitteln. Se
+
+\section{Material und Methoden}\label{sec:material}
+\subsection{Bohrwiderstandsverfahren}\label{subsec:bohrwiderstandsverfahren}
+Der von Frank Rinn entwickelte 
+Resistograph\SymbReg\ ist ein elektronisch gesteuertes
+Bohrwiderstandsmessgerät, dessen zugrunde liegendes Verfahren 1990 von Frank
+Rinn im Patent "Vorrichtung zur Materialprüfung, insbesondere Holzprüfung durch
+Bohr- bzw. Eindringwiderstandsmessung"{} patentiert (Patentnr.: DE 4122494 B4)
+wurde.
+
+Das Bohrwiderstandsverfahren hat eine lange Geschichte, welche in den 1970ern
+mit den deutschen Ingenieuren Kamm und Voss begann. Die beiden Ingenieure
+entwickelten ein Gerät mit einer durch einen Elektromotor angetriebenen
+Bohrnadel, mit welchem es möglich war, in Holz einzudringen. Ein
+federgelagerter Aufzeichnungsapperat zeichnete ein eins zu eins Profil über
+einen Kratzstift auf Wachspapier. Der federgelagerte Aufzeichnungsmechanismus
+erzeugte aufgrund der Resonanzschwingungen der Feder nicht verwertbare
+Ergebnisse. 
+
+Die Weiterentwicklung des Geräts war jedoch ein elektronisch messendes
+Bohrwiderstandsgerät, welches den gemessenen Bohrwiderstand mittels eines
+akustischen Signals anhand des Energieverbrauchs der beim Bohren entsteht
+wiedergab.
+
+Frank Rinn entwickelte 1987 im Rahmen seiner Diplomarbeit das von der Firma
+FEIN in Stuttgart produzierte und elektrisch aufzeichnende
+Bohrwiderstandsmessgerät "Densitomat", welches auch an Wissenschaftler und
+Experten weltweit verkauft wurde. Aufgrund der hohen Korrelation (r
+\textgreater{} 0.9) der Bohrprofile mit der Dichte des Holzes entlang des
+Bohrkanals, waren das erste mal Aussagen über den Zustand des Holzes möglich.
+
+Der Name "Densitomat" war kein eingetragener Markenbegriff. Und so kam es zur
+Weiterentwicklung des "Densitomaten" zum Resistograph\SymbReg, dessen Name
+eine eingetragene Marke darstellt. Resistograph\SymbReg-Geräte charakterisiert
+eine besonders hohe Genauigkeit in der Auflösung und Korrelation der Messung
+zur Dichte, sodass sehr exakte Aussagen über den Holzzustand möglich
+sind.\footcite{rinn:resi_drill_transition}
+
+Im Folgenden wird der Aufbau des Resistograph\SymbReg\ und dessen praktische
+Benutzung am Holzkörper beschrieben. Zusätzlich wird die Auswertung der
+Messkurven am Computer aufgezeigt. 
+
+\subsection{Aufbau des Resistograph\SymbReg}
+Der Resistograph der Firma Rinntech ist ein elektronisch gesteuertes
+Bohrwiderstandsmessgerät zur Untersuchung von grünem und trockenem Holz. Im
+Folgenden wird der Resistograph\SymbReg\ Modell R6 vorgestellt, mit dem der
+Verfasser zumeist gearbeitet hat.
+\footcite{rinn:risserkennung}
+
+Das Gerät besitzt zwei Motoren. Der eine Motor ist für den Vortrieb der Nadel
+ins Holz zuständig und sitzt im Handgriff. Der andere Motor sorgt für die
+Rotierung der Nadel und ist im Schlitten untergebracht. Es ist möglich, bis zu
+50 cm tiefe Bohrungen anzufertigen. Mittels einer sehr fein abgestuften
+Sensorik wird beim Hineinbohren in einen Holzkörper die Dichte erfasst. Die
+Software reguliert in Abhängigkeit der Härte des Holzes die
+Vorschubsgeschwindigkeit. Über einen via Bluetooth verbundenen Drucker lässt
+sich noch vor Ort eine eins zu eins mit der Bohrtiefe korreliertende
+Dichtekurve ausdrucken. Die Kurve wird zusätzlich auf dem geräteinternen
+Speicher zum späteren Auslesen via USB und Bearbeiten am Computer gespeichert.
+Der Speicher ermöglicht das Speichern von bis zu 10.000 Bohrkurven. Darüber
+hinuas ist es auch möglich, das Bohrprofil mit einer App für Smartphones
+aufzuzeichnen und abzubilden.
+
+Auf der Unterseite des Gerätes sind Bedienknöpfe angebracht, die auch mit
+dicken Handschuhen bedient werden können. Mittels der Bedienknöpfe sind alle
+notwendigen Optionen, wie beispielsweise die Einstellung der
+Projektnummerierung, die Bohrtiefe und -geschwindigkeit einstellbar.
+
+Die obere Hälfte des R6 beseht aus einem durchsichtigen Gehäuse, auf dessen
+Oberseite über einen magnetischen Deckel die Bohrnadel in jeder
+Bohrposition ausgetauscht werden kann.
+
+Der Resistograph R6 und das gesamte Zubehör (Bohrnadeln, Ersatzakku, Drucker,
+etc. ) wird schaumstoffgelagert in einem stoßsicheren Plastikkoffer
+transportiert. \footcite{rinn:anleitung_resi}
+
+\subsection{Benutzung und Bedienung des Resistograph\SymbReg}
+Bei der Benutzung des Resistograph\SymbReg\ Modell R6, geht es zum einen um
+die eigentiche Bedienung am Holzkörper. Zum Anderen ist die korrekte die
+Auswertung und Interpretation der Messergebnisse bzw. der Bohrprofile um
+Aussagen zum Zustand des Holzes entlang des Bohrweges unerlässlich.
+
+Zur Durchführung einer Bohrung wird sowohl der Resistogpraph\SymbReg\ als auch
+der Drucker eingeschaltet und via Bluetooth miteinander verbunden. Auf den
+Displays der Unterseite des Geräts lassen sich vorab Projekt-, Objekt- und
+Profilnummer einstellen. Jedes Profil erhält im geräteinternen Speicher einen
+Dateinamen, der sich aus der Aneinanderkettung der Projekt-, Objekt- und
+Profilnummer in der genannten Reihenfolge zusammensetzt. Um eine Bohrung zu
+beginnen hält man das Bohrgerät unmittelbar an den Holzkörper und betätigt
+einen entsprechenden Hebel um eine Bohrung zu beginnen. Das Gerät bohrt
+automatisch die volle Länge von 50cm ins Holz. Es empfiehlt sich bei Austritt
+aus dem Holzkörper entweder an dessen Ende oder in einem größeren Hohlraum,
+die Bohrnadel sofort zurückzuziehen um ein Verbiegen der Bohrnadel durch die
+Rotation der Nadel im Freien zu vermeiden.  Die Eindringgeschwindigkeit der
+Nadel ins Holz wird automatisch an die Holzhärte angepasst.
+
+Während der Bohrung zeichnet der Drucker in Echtzeit ein mit der Bohrtiefe
+übereinstimmendes Bohrprofil auf. Ein Ergebnis ist also unmittelbar nach der
+Bohrung vorhanden und es können bereits am Baum erste Aussagen zum Holzzustand
+entlang der Bohrung gemacht werden.
+
 \section{Ergebnisse}
 \section{Zusammenfassung}
 \section{Anhang}
 
 % Bibliographie
 \addcontentsline{toc}{section}{Literaturverzeichnis}
-\bibliographystyle{unsrt}
-\bibliography{biblio} % Dateiname der Bibliografie
+\bibliographystyle{jurabib}
+\bibliography{/Users/dda/Documents/Baumpflege/biblio,/Users/dda/Documents/Texte/biblio}
+
+
+
 
 \end{document}
