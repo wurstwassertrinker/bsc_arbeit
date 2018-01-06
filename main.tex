@@ -8,13 +8,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 
-% \usepackage[draft]{graphicx} % Abb. draft entfernen = Bilder sichtbar 
-% \usepackage{capt-of} % Abbildungs- und Tabellenbeschriftungen in minipage
-% \usepackage{pdfpages} % Dient dem Einfügen von PDFs
-% \usepackage{amsmath} % Formeln
-% \usepackage{xcolor} % Farbige Tables
-% \usepackage{booktabs} % Eine Erweiterung der Typografie (Fette hlines,...)
-% \usepackage{geometry}
+%\usepackage[draft]{graphicx} % Abb. draft entfernen = Bilder sichtbar 
+%\usepackage{capt-of} % Abbildungs- und Tabellenbeschriftungen in minipage
+%\usepackage{pdfpages} % Dient dem Einfügen von PDFs
+%\usepackage{amsmath} % Formeln
+%\usepackage{xcolor} % Farbige Tables
+%\usepackage{booktabs} % Eine Erweiterung der Typografie (Fette hlines,...)
+%\usepackage{geometry}
 
 % Jurabib für Quellenangaben, \bibliographystyle{jurabib} nicht vergessen!
 \usepackage[
@@ -44,7 +44,7 @@
 \thispagestyle{empty}
 \pagebreak
 
-\abstract{
+\begin{abstract}
 Das Bohrwiderstandsverfahren wurde entwickelt um den Holzzustand entlang eines
 Bohrkanals zu messen. Das Verfahren kann sowohl an stehendem, grünen Holz als
 auch an verbauten, trockenem Holz angewendetet werden. 
@@ -52,7 +52,7 @@ In dieser Arbeit wird das Bohrwiderstandsverfahren mit einem
 Resistographen\SymbReg angewandt um Jahrringanalysen an stehendem Holz
 durchzuführen. Dahingehend wird es auf seine Praktikabilität überprüft um 
 ein neues Einsatzgebiet der Bohrwiderstandsmessung zu eröffnen.
-}
+\end{abstract}
 
 % Abbildungsverzeichnis
 \addcontentsline{toc}{section}{Abbildungungen}
@@ -64,26 +64,33 @@ ein neues Einsatzgebiet der Bohrwiderstandsmessung zu eröffnen.
 
 \section{Einleitung und Themenstellung}\label{sec:einleitung}
 % TODO Quelle für ersten Absatz finden
-Das Bohrwiderstandsverfahren wurde ursprünglich entwickelt um den Holzzustand
-anhand der an der Bohrnadel gemessenen Dichte Bohrkanals zu messen. Heute
-wird es sowohl für stehendes Holz in der Baumuntersuchung zu Zwecken der
-Verkehrssicherheit als auch für trockenes und bereits verbautes Holz
-im Bereich der Holzkonstruktionsuntersuchung angewendet. In dieser Arbeit wird
-das Bohrwiderstandsverfahren in dem Bereich der Jahrringanalyse angewandt und
+Das Bohrwiderstandsverfahren wurde entwickelt um den Holzzustand
+anhand der an der Bohrnadel gemessenen Dichte entlang des Bohrkanals zu
+erfassen. Heute wird es sowohl für stehendes Holz in der Baumuntersuchung zu
+Zwecken der Verkehrssicherheit\footcite{rinn:bohrwiderstandsprofile}, als auch
+für trockenes und bereits verbautes Holz im Bereich der
+Holzkonstruktionsuntersuchung
+angewendet\footcite{rinnfischer:zustandskartierung}. In dieser Arbeit wird das
+Bohrwiderstandsverfahren in dem Bereich der Jahrringanalyse angewandt und
 dahingehend auf seine Praktikabilität überprüft.
 
-Jahrringanalysen an stehendem Holz werden in der
-Waldwachstumskunde unter anderem zur Untersuchung von klimatischen Einflüssen
-auf einen Bestand herangeszogen. Anhand von erstellten Jahrringkurven, die mit
-einer Jahrringchronologie verglichen werden, können unter Zuhilfenahme von
+Jahrringanalysen an stehendem Holz werden in der Waldwachstumskunde unter
+anderem zur Untersuchung von klimatischen Einflüssen auf einen Bestand
+herangeszogen. Anhand von erstellten Jahrringkurven, die mit einer
+Jahrringchronologie verglichen werden, können unter Zuhilfenahme von
 klimatischen Daten, Aussagen über das Wachstum eines Bestandes unter
-bestimmten Einflüssen, beispielsweise einer ausgeprägten
-Trockenperiode, angestellt werden. Eine Jahrringkurve wird über das zählen von
-Jahrringen und das messen der Jahrringbreiten erstellt. Dies geschieht auf
-Grundlage von Holzproben, die typischerweise als Holzquerschnitt oder als
-Kernbohrung vorliegen. Liegt die Probe als Querschnitt vor, musste zuvor ein
-Baum gefällt werden. Liegt die Probe als Kernbohrung vor, wurde ein stehender
-Baum durch das ziehen von mindestens zwei Kernbohrungen, verletzt.
+bestimmten Einflüssen, beispielsweise einer ausgeprägten Trockenperiode,
+angestellt werden. Eine Jahrringkurve wird über das zählen von Jahrringen und
+das messen der Jahrringbreiten erstellt. Dies geschieht auf Grundlage von
+Holzproben, die typischerweise als Holzquerschnitt oder als Bohrkern
+vorliegen. Liegt die Probe als Querschnitt vor, musste zuvor ein Baum gefällt
+werden. Liegt die Probe als Bornkern vor, wurde ein stehender Baum durch
+das Ziehen eines Bohrkerns mittels Zuwachsbohrers (Verdrängungsbohrer),
+verletzt. Beide Verfahern haben die negative Auswirkung, dass der Baum
+entweder stirbt bzw. schon tot ist oder, dass ein lebender Baum aus
+forstlicher Sicht entwertet wird und einen nicht unerhebliche Verletzung
+im Holz entsteht, die eine Eintrittspforte für holzabbauende Pilze
+bildet\footcite[66]{schweingruber1983jahrring}.
 
 In dieser Arbeit wird das Verfahren der Bohrwiderstandsmessung im Bereich der
 Jahrringanalyse angewendet. Es wird überprüft ob Messungen mittels
@@ -92,22 +99,28 @@ erstellen und somit Aussagen zu oben erwähnten Themen, wie die Auswirkung von
 klimatischen Ereignissen auf das Wachstum eines Bestandes, zu machen. Die
 Messung eines Bohrwiderstandsmessgerätes liefert bei ausreichender
 Genauigkeit, korrekter Anwendung und einer Korrelation der Bohrkurve zur
-Holzdichte entlang des Bohrkanalas, eine Bohrkurve, die Aussagen
-zum Holzzustand zulassen. Auf dieser Kurve sind i.d.R. bereits
-Jahrringe, sowohl Jahrringgrenzen zusammen mit Früh und Spätholzzonen, als
-auch intraannuläre Jahrringstrukturen zu erkennen. Ob diese Messergebnisse
-ausreichen um Jahringkurven zu erstellen, die in ihrer Zuverlässigkeit,
-Genauigkeit und im Auwand zur Erstellung, mit den Jahrringkurven basierend auf
-den o.g. etablierten Verfahren mithalten können ist Gegenstand dieser Arbeit.
+Holzdichte entlang des Bohrkanalas, eine Bohrkurve, die Aussagen zum
+Holzzustand zulassen. Auf dieser Kurve sind i.d.R. bereits Jahrringe, sowohl
+Jahrringgrenzen zusammen mit Früh und Spätholzzonen, als auch intraannuelle
+Jahrringstrukturen zu erkennen. Ob diese Messergebnisse ausreichen um
+Jahringkurven zu erstellen, die in ihrer Zuverlässigkeit, Genauigkeit und im
+Aufwand zur Erstellung, mit den Jahrringkurven basierend auf den o.g.
+etablierten Verfahren mithalten können ist Gegenstand dieser Arbeit.
 
-
+Sind Messungen zu o.g. Zwecken und unter den genannten Gesichtspnkten mit
+einem Bohrwiderstandsmessgerät möglich, könnten Bestandesbäume und
+Holzkonstruktionen mit minimalem Schadensaufwand dendrochronologisch
+untersucht werden, da eine Bohrwiderstandsmessung ein Loch im Holzkörper von
+nicht mehr als 3mm Durchmesser erzeugt.
 
 \section{Material und Methoden}\label{sec:material}
+\subsection{Bohrwiderstandsverfahren}\label{subsec:bohrwiderstandsverfahren}
 In dieser Arbeit wurde das Bohrwiderstandsgerät Resistograph\SymbReg\ Modell
 R6 der Firma Rinntech für alle Messungen verwendet. Im Folgenden wird ein
 kurzer Überblick über die Entstehungsgeschichte, den Aufbau und die Bedienung
 des Gerätes gegeben.
-\subsection{Bohrwiderstandsverfahren}\label{subsec:bohrwiderstandsverfahren}
+\subsubsection{Geschichte der
+Bohrwiderstandsmessung}\label{subsubsec:geschichte_bwm}
 
 Der von Frank Rinn entwickelte Resistograph\SymbReg\ ist ein elektronisch
 gesteuertes Bohrwiderstandsmessgerät, dessen zugrunde liegendes Verfahren 1990
@@ -147,7 +160,7 @@ Im Folgenden wird der Aufbau des Resistograph\SymbReg\ und dessen praktische
 Benutzung am Holzkörper beschrieben. Zusätzlich wird die Auswertung der
 Messkurven am Computer erläutert. 
 
-\subsection{Aufbau des Resistograph\SymbReg}
+\subsubsection{Aufbau des Resistograph\SymbReg}
 Der Resistograph der Firma Rinntech ist ein elektronisch gesteuertes
 Bohrwiderstandsmessgerät zur Untersuchung von grünem und trockenem Holz. Im
 Folgenden wird der Resistograph\SymbReg\ Modell R6 vorgestellt, mit dem der
@@ -174,7 +187,7 @@ dicken Handschuhen bedient werden können. Mittels der Bedienknöpfe sind alle
 notwendigen Optionen, wie beispielsweise die Einstellung der
 Projektnummerierung, die Bohrtiefe und -geschwindigkeit einstellbar.
 
-Die obere Hälfte des R6 beseht aus einem durchsichtigen Gehäuse, auf dessen
+Die obere Hälfte des R6 besteht aus einem durchsichtigen Gehäuse, auf dessen
 Oberseite über einen magnetischen Deckel die Bohrnadel in jeder
 Bohrposition ausgetauscht werden kann.
 
@@ -182,7 +195,7 @@ Der Resistograph R6 und das gesamte Zubehör (Bohrnadeln, Ersatzakku, Drucker,
 etc. ) wird schaumstoffgelagert in einem stoßsicheren Plastikkoffer
 transportiert. \footcite{rinn:anleitung_resi}
 
-\subsection{Benutzung und Bedienung des Resistograph\SymbReg}
+\subsubsection{Benutzung und Bedienung des Resistograph\SymbReg}
 Bei der Benutzung des Resistograph\SymbReg\ Modell R6, geht es zum einen um
 die eigentiche Bedienung am Holzkörper. Zum Anderen ist die korrekte 
 Auswertung und Interpretation der Messergebnisse bzw. der Bohrprofile um
@@ -206,8 +219,60 @@ angepasst.
 
 Während der Bohrung zeichnet der Drucker in Echtzeit ein mit der Bohrtiefe
 übereinstimmendes Bohrprofil auf. Ein Ergebnis ist also unmittelbar nach der
-Bohrung vorhanden und es können bereits am Baum erste Aussagen zum Holzzustand
-entlang der Bohrung gemacht werden.
+Bohrung vorhanden und es können bereits am Baum oder an einer untersuchten
+Holzkonstruktion erste Aussagen zum Holzzustand im untersuchten Bereich
+gemacht werden.
+
+\subsection{Jahrringanalyse}
+Die Jahrringanalyse, die zum Vergleich mit den aus der Bohrwiderstandsmessung
+gezogenen Jahrringdaten herangezogen wurde, wurde mit der
+Lignostation\textsuperscript{TM} (im Folgenden LGS genannt) durchgeführt.
+
+\subsubsection{Jahrringanalyse mit der Lignostation\textsuperscript{TM}}
+
+
+\subsection{Versuchsaufbau}
+Um einen möglichst realitätsnahen Versuch durchzuführenm, wurden Proben von
+Bestandsbäumen verwendet, die im Zuge eine Fällmaßnahme am 18.11.2017 gefällt
+wurden. Die Bäume wurden am 18.11.2017 gefällt. Die Bäume befanden sich an
+einem westexponierten Hang in 34225 Kirchbauna/Baunatal. Der genaue Standort
+kann Abbildung XXX entnommen werden. Es wurden Proben von den drei Holzarten
+Nadelholz (NH), zerstreutporiges (ZH) und ringporiges Laubholz (RH) entnommen.
+Von diesen Holzarten wurden jeweils drei Proben einer Kiefer, \textit{Pinus
+sylvestris} (NH), einer Hainbuche, \textit{Carpinus betulus} (ZH) und einer
+Stieleiche, \textit{Quercus robur} (RH) verwendet.
+
+Bei den Proben handelt es sich um Baumscheiben, die alle in etwa 50 cm Höhe
+über dem Wurzelansatz vom Stamm mit einer Motorsäge abgetrennt wurden wurden.
+Die Versuchsdurchführung fand in zwei verschiedenen Zeiträumen in den
+Räumlichkeiten der Firma Rinntech unter Aufsicht von Frank Rinn in Heidelberg
+statt. 
+
+Die Proben wurden beschriftet, vermessen und fotografisch dokumentiert.
+Volumen, Gewicht und Größe können Tabelle XXX entnommen werden.  Im nächsten
+Schritt folgten an jeder Scheibe 2 Bohrungungen mittels Resistograph\SymbReg
+R6 (im Folgenden R6 genannt). Der R6 wurde dabei so positioniert, dass die
+Bohrnadel orthogonal auf die Jahrringegrenzen getroffen und durch den Kern,
+einmal durch die gesamte Scheibe gebohrt ist. Um eine störungsfreie Kurve zu
+erhalten, wurde sowohl die Holzscheibe als auch der R6 auf dem Versuchstisch
+mittels Schraubzwingen fixiert. An jeder Scheibe wurden zwei Bohrungen, 90
+Grad versetzt durchgeführt, um, wie bei der optischen Jahrringanalyse auch,
+mindestens zwei Pfade von Jahrringen bis zum Kern verfolgen zu können. 
+
+Damit die Scheiben in einem möglichst frischen Zustand bleiben, wurden die
+Scheiben bis zur Bohrung in Frischhaltefolie eingewickelt. Sämtliche
+Bohrungen wurden fotografisch dokumentiert. Jeder Ausdruck einer Bohrung wurde
+über die durchbohrte Scheibe entlang des Bohrkanals gelegt und fotografiert.
+Die Ein und Austrittsstellen der Bohrungen sind mit Schrauben und einer Nummer
+am Eingang versehen. Die Nummer entspricht dabei der Bohrprofilnummer, die den
+Dateinamen der abgespeicherten Bohrprofile im geräteinternen Speicher
+entspricht.
+
+Schleifen
+
+Lignostation
+
+Kurven übereinander legen, vergleichen, zählen?
 
 \section{Ergebnisse}
 \section{Zusammenfassung}
@@ -216,7 +281,7 @@ entlang der Bohrung gemacht werden.
 % Bibliographie
 \addcontentsline{toc}{section}{Literaturverzeichnis}
 \bibliographystyle{jurabib}
-\bibliography{/Users/dda/Documents/Baumpflege/biblio,/Users/dda/Documents/Texte/biblio}
+\bibliography{/Users/dda/Documents/Holzuntersuchung/biblio,/Users/dda/Documents/Jahrringanalyse/biblio,/Users/dda/Documents/Baumpflege/biblio,/Users/dda/Documents/Texte/biblio}
 
 
 
