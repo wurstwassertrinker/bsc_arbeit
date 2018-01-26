@@ -1,0 +1,23 @@
+# Verzeichnisse
+Fotos
+Fotos_compressed
+
+# Dateien
+# .gitignore
+.DS*
+# makefile
+*.jpg
+*.png
+*.pdf
+*.lof
+*.lot
+*.log
+*.aux
+*.toc
+*.bbl
+*.blg
+*.swp
+*.lol
+*.zip
+*.doc
+*.url
